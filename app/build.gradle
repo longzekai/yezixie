@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+Properties props = new Properties()
+//Load the local root directory sign.properties file
+props.load(new FileInputStream(file(rootProject.file("sign.properties"))))
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    //the default configs.
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    //the sign configs,Be careful and must execute before BuildType.
+    signingConfigs {
+        //the debug version apk.
+        debug {
+            keyAlias props['signing.jjdxm_alias']
+            keyPassword props['signing.jjdxm_password']
+            storeFile file(rootProject.file("dou361.jks"))
+            storePassword props['signing.jjdxm_password']
+        }
+        //the release version apk.
+        release {
+            keyAlias props['signing.alias']
+            keyPassword props['signing.password']
+            storeFile file(rootProject.file("dou361.jks"))
+            storePassword props['signing.password']
+        }
+    }
+    //the build configs.
+    buildTypes {
+        //build debug type.
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //build release type.
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //gradle 3.0 must setting productFlavors as the same
+    flavorDimensions "versionCode"
+    //Multi-channel configs.
+    //Execute./gradlew assembleRelease and will play release packages for all channels.
+    //Execute./gradlew assembleGoogle and will play the release and debug packages of the google channel.
+    //Execution./gradlew assembleGoogleRelease will generate release google channel.
+    //debug which one can use buildVariants select the productFlavors
+    productFlavors {
+        google {
+            // Each environment package name is different
+            applicationId rootProject.ext.applicationId
+            // Dynamically add string.xml fields
+            //resValue "string", "name", "@string/app_name"
+            // public static final String PRINT_LOG = BuildConfig.PRINT_LOG;
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            // Modify channel variables in AndroidManifest.xml
+            manifestPlaceholders = [CHANNEL_VALUE: "google"]
+        }
+        tencent {
+            applicationId rootProject.ext.applicationId
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            manifestPlaceholders = [CHANNEL_VALUE: "tencent"]
+        }
+        xiaomi {
+            applicationId rootProject.ext.applicationId
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            manifestPlaceholders = [CHANNEL_VALUE: "xiaomi"]
+        }
+        baidu {
+            applicationId rootProject.ext.applicationId
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            manifestPlaceholders = [CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            applicationId rootProject.ext.applicationId
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            manifestPlaceholders = [CHANNEL_VALUE: "xiaomi"]
+        }
+        _360 {
+            applicationId rootProject.ext.applicationId
+            buildConfigField "boolean", "LOG_SWITCH", 'false'
+            manifestPlaceholders = [CHANNEL_VALUE: "_360"]
+        }
+    }
+}
+
+//local aar library must add current reference to loading.
+repositories { flatDir { dirs 'libs' } }
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.jjdxm_v4
+    implementation rootProject.ext.jjdxm_v7
+    implementation rootProject.ext.jjdxm_vector
+    implementation rootProject.ext.jjdxm_constraint
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
+    implementation 'com.jakewharton:butterknife:8.5.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.0'
+}

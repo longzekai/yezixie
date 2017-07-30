@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yezixie.yezixie.LanguageSettingActivity">
+
+    <Button
+        android:id="@+id/btn_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_language_auto"/>
+    <Button
+        android:id="@+id/btn_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_language_english"/>
+    <Button
+        android:id="@+id/btn_simplified_chinese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_ls_chinese"/>
+    <Button
+        android:id="@+id/btn_traditional_chinese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_lt_chinese"/>
+    <Button
+        android:id="@+id/btn_taiwan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_taiwan"/>
+
+</LinearLayout>

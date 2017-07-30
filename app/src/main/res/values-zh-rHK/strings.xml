@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">椰子蟹</string>
+    <string name="setting_language">多語言</string>
+    <string name="setting_language_auto">跟隨系統</string>
+    <string name="setting_language_english">英文</string>
+    <string name="setting_ls_chinese">簡體中文</string>
+    <string name="setting_lt_chinese">繁體中文（香港）</string>
+    <string name="setting_taiwan">繁體中文（台灣）</string>
+</resources>

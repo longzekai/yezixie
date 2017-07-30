@@ -1,0 +1,88 @@
+
+#####################
+activity
+XxxActivity
+SettingActivity 首字母大写
+activity xml
+activity_xxx.xml
+activity_setting.xml 所有字母小写
+#####################
+fragment
+XxxFragment
+MineFragment 首字母大写
+fragment xml
+fragment_xxx.xml
+fragment_mine.xml 所有字母小写
+#####################
+adapter
+XxxAdapter
+LiveAdapter 首字母大写
+#####################
+hodler
+XxxItemHodler
+LiveItemHodler 首字母大写
+hodler xml
+hodler_item_xxx.xml
+hodler_item_live.xml 所有字母小写
+#####################
+utils
+XxxUtils
+FileUtils 首字母大写
+#####################
+控件
+linerlayout
+ll_xxx
+llXxx
+framelayout
+fl_xxx
+flXxx
+reallayout
+rl_xxx
+rlXxx
+button
+btn_xxx
+btnXxx
+textview
+tv_xxx
+tvXxx
+RadioGroup
+rg_xxx
+rgXxx
+RadioButton
+rb_xxx
+rbXxx
+CheckBox
+cb_xxx
+cbXxx
+listview
+lv_xxx
+lvXxx
+recycleview
+rv_xxx
+rvXxx
+imageview
+iv_xxx
+ivXxx
+scrollerview
+sv_xxx
+svXxx
+
+#####################
+方法
+XxxXxx()
+arraysToString() 除了第一个字母，首字母大写
+#####################
+变量
+g_xxx 全局变量
+xxx
+
+#####################
+字段
+java 中，除了第一个字母，首字母大写
+isSelect
+xml 中，所有字母小写，_最多2个，多出内容取首字母放中间
+xxx_xxx_xxx.xml
+hodler_item_book_hot.xml 需写成 holder_ib_hot.xml
+xxx_xxx_xxx
+tv_hodler_item_book_hot_title 需写成 tv_hibh_title
+#####################

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coconut crab</string>
+    <string name="setting_language">Multilingual</string>
+    <string name="setting_language_auto">Follow System</string>
+    <string name="setting_language_english">English</string>
+    <string name="setting_ls_chinese">Simplified Chinese</string>
+    <string name="setting_lt_chinese">Traditional Chinese(Hong Kong)</string>
+    <string name="setting_taiwan">Traditional Chinese(Taiwan)</string>
+</resources>
