@@ -1,0 +1,30 @@
+<RelativeLayout
+    android:id="@+id/v_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/customui_loading"
+        android:indeterminateDuration="1200"/>
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pb_loading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="玩命加载中..."
+        android:textColor="#FF999999"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

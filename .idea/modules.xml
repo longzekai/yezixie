@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseconverter/baseconverter.iml" filepath="$PROJECT_DIR$/baseconverter/baseconverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basedb/basedb.iml" filepath="$PROJECT_DIR$/basedb/basedb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseprotocal/baseprotocal.iml" filepath="$PROJECT_DIR$/baseprotocal/baseprotocal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseui/baseui.iml" filepath="$PROJECT_DIR$/baseui/baseui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseutils/baseutils.iml" filepath="$PROJECT_DIR$/baseutils/baseutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/yezixie.iml" filepath="$PROJECT_DIR$/yezixie.iml" />
     </modules>
   </component>

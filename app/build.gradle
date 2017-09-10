@@ -110,4 +110,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
     implementation 'com.jakewharton:butterknife:8.5.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.0'
+    implementation project(':baseconverter')
+    implementation project(':basedb')
+    implementation project(':baseprotocal')
+    implementation project(':baseui')
+    implementation project(':baseutils')
 }

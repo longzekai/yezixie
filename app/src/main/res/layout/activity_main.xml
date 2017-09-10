@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yezixie.yezixie.MainActivity">
+    tools:context="com.dou361.yezixie.MainActivity">
 
     <Button
         android:id="@+id/btn_setting"
